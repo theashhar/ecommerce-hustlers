@@ -1,0 +1,17 @@
+* {
+    font-family: 'Figtree', sans-serif;
+ 
+}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700;800&display=swap');
+
+/* export default makeStyles((theme) => ({
+  toolbar: theme.mixins.toolbar, */
+  .content: {
+    flex-Grow: 1;
+    background-Color: ;
+    padding: 200px;
+  },
+  .root: {
+    flex-Grow: 1;
+  }
+/* })); */

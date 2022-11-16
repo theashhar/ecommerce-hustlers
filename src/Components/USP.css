@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,700;1,700&display=swap');
+h3 {
+    font-family: 'Cormorant';
+    font-weight: 700;
+    color:rgb(255, 255, 255)
+}
+p {
+    color:rgb(255, 255, 255)
+}
+.service-bg{
+    background-color: #29496D;
+    padding: 1px 0px 90px 0px;
+    margin-bottom: 30px;
+
+}
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    gap: 1.5rem;
+    margin-top: 4rem;
+    
+    margin-right: 15%;
+    margin-left: 15%;
+}
+.s-box  {
+    text-align: center;
+    padding: 23px 30px 0px 30px;
+}
+ 
+    .s-box img {
+        width: 52px;
+        margin: auto;
+    }   
+    .s-box-centre img{
+        width: 140px;
+        margin: auto;      
+    }  
+.s-box-centre {
+    text-align: center;
+    padding: px 0px 0px 0px;
+}

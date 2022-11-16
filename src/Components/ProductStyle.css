@@ -1,0 +1,23 @@
+* {
+    font-family: 'Figtree', sans-serif;
+ 
+}
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700;800&display=swap');
+
+.root {
+    max-Width: 90%;
+  }
+.media {
+    font-weight: 800;
+    height: 0;
+    padding-top: 66.25%; 
+  }
+.cardActions {
+    display: flex;
+    justify-content: flex-end;
+  }
+.cardContent {
+    display: 'flex';
+    justify-content: space-around;
+   
+  }

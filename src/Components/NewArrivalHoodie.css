@@ -1,0 +1,36 @@
+h2 {
+    font-family: 'Cormorant';
+    font-weight: bold;
+    color: #29496D;
+    font-size: 50px;
+    margin-left: 4%;
+    }
+.hoodie-img {
+    position: relative;
+}
+.wing-icon{
+    width: 70%;
+    position: absolute;
+}
+.New-arrival-box {
+    display: flex;
+    justify-content: center;
+
+    padding: 6% 10% 6% 10% ;
+}
+
+
+
+
+
+
+/* .hoodie {
+    display: flex;
+}
+.New-arrival-box .hoodie {
+    position: absolute;
+}
+
+.hoodie-img {
+    align-items: center;
+} */
