@@ -8,7 +8,7 @@ import wings_icon from '../Components/assets/wings_icon.svg';
 const NewArrivalHoodie = () => {
   return (
 <>
-  <h2>New Arrival</h2>
+  <h2 id='NewArrival-sec'>New Arrival</h2>
     <div className='New-arrival-box'>
       <img src={wings_icon} className='wing-icon'/>
       <img src={hoodie_arrival_img} className='hoodie-img'/>       

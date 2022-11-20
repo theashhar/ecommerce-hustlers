@@ -18,7 +18,7 @@ const product = [
 ]
 
 
-const Products = () => {
+const ProductsList = () => {
 return (
   <main className='content'>
     <Grid container jusify='centre' spacing={2}>
@@ -32,4 +32,4 @@ return (
 )  
 }
 
-export default Products
+export default ProductsList

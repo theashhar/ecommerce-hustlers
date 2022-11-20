@@ -1,27 +1,39 @@
 import * as React from 'react'
-import { Link } from 'react-router-dom'
-// import './Navbar.css'
+import { Link, useNavigate, HashLink } from 'react-router-dom'
+import './NavbarStyle.css'
 import CartIcon from '../Components/assets/CartIcon.svg'
 import UserIcon from '../Components/assets/UserIcon.svg'
 import HustlersHeavenLogo from '../Components/assets/HustlersHeavenLogo.svg'
 
+
 const Navbar = () => {
+  
+const Navigate = useNavigate();
   return (
     <div>
       <section id='header'>
-      <img src={HustlersHeavenLogo} alt="Logo" className='logo'/>
- 
-      </section>
-
-      <div> 
-        <ul id='navbar'>
+      <img src={HustlersHeavenLogo} onClick={()=>Navigate('/')} alt="Logo" className='HHlogo'/>
+        
+          <ul id='navbar'>
             <li><Link to='/'> HOME</Link></li>
+            <li><Link to='/'>PRODUCTS</Link></li>
             <li><Link to='/signup'>SIGNUP</Link></li>
+            <Link to='/login'><li>LOGIN</li></Link>
+            <Link to='/Cart'>
+              <li className='cartIcon'>
+                <img src={CartIcon} alt="no img" id='cartlogo'/>                
+                <span className='cart-icon-css'>1</span>
+              </li>
+            </Link><Link to='/userprofile'>
+              <li className='profile-icon'>
+                <img src={UserIcon} alt="no img" id='User'/>
+              </li>
+            </Link>            
 
 
-        </ul>
-      </div>
-
+          </ul>
+       
+      </section>
       {/* <nav id='navbar'>
         
         <img src={HustlersHeavenLogo} alt="Logo" />

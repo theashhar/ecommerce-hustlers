@@ -1,5 +1,5 @@
 import React from 'react'
-import Products from './Products.js'
+import ProductsList from './ProductsList.js'
 
 import HomeSlider from './HomeSlider.js'
 import USP from './USP.js'
@@ -12,7 +12,7 @@ const Home = () => {
       <HomeSlider />
       <USP />
       <NewArrivalHoodie />
-      <Products />
+      <ProductsList />
     </div>
     
 

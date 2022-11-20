@@ -5,7 +5,7 @@ import { makeStyles } from '@mui/styles';
 // import { ThemeProvider } from '@mui/material/styles';
 
 export default makeStyles(() => ({
-    root: {
+    root: { 
         maxWidth: '100%',
       },
       media: {

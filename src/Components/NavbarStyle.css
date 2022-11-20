@@ -1,0 +1,41 @@
+#header {
+    /* position: fixed; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-between;
+    padding: 5px 65px 5px 65px;
+    background-color: rgb(255, 255, 255, 0.7);
+    box-shadow: 0 1px 12px  rgb(156, 156, 156);;
+}
+li:hover { transform: scale(1.1);}
+li {
+    transition: .2s;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+    .cartIcon{
+        display: flex;
+        align-items: center;
+    }
+    .cart-icon-css {
+        width: 20%;
+    }
+.HHlogo  {
+    width: 220px;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+#cartlogo{
+    width: 22px;
+}
+.profile-icon {
+    width: 27px;
+
+}

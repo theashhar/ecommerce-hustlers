@@ -5,7 +5,7 @@ import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
-
+import Login from '../Components/Login';
 import HustlersHeavenLogo from '../Components/assets/HustlersHeavenLogo.svg'
 // import useStyles from './Headerstyle.js';
 
@@ -25,6 +25,9 @@ const Header = () => {
           <div className='grow' />
 
           <div className='button'>
+            <Typography component={Link} to="/login" variant="h6"  element={Login } className='title' color="black">
+              <p className='navtext'>Login</p>
+            </Typography>
             <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
               <Badge badgeContent={2} color="secondary">
                 <ShoppingCartIcon />
