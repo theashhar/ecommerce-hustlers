@@ -2,12 +2,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react-dom';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 import Navbar from './Components/Navbar';
-import ProductsList from './Components/ProductsList';
+// import ProductsList from './Components/ProductsList';
 import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Login from './Components/Login';
