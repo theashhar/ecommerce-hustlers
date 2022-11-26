@@ -20,7 +20,7 @@ const product = [
 
 const ProductsList = () => {
 return (
-  <main className='content'>
+  <main className='content' id='productsnavigate'>
     <Grid container jusify='centre' spacing={2}>
       {product.map((product) => (
         <Grid item key={product.id} xs={6} sm={6} md={4} lg={2 }>        

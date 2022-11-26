@@ -31,10 +31,13 @@ const Login = () => {
           (<AiFillEyeInvisible className='absolute right-16 bottom-52' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />):
           (<AiFillEye  className='absolute right-16 bottom-52' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />)} 
 
-          <div>
+          <div className='NoAcc'>
             <p2 >Don't have an account? 
-              <Link to='/signup' >Register</Link>
+              <Link to='/signup' >Signup</Link>
             </p2>
+            <p2>
+            <Link to='/forgot-password' >Forgot Password</Link>
+              </p2>
           </div>
 
           <button className="login-btn" type="submit" >Login</button>

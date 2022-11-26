@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { Link, useNavigate, HashLink } from 'react-router-dom'
+import { Link, useNavigate,} from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import './NavbarStyle.css'
 import CartIcon from '../Components/assets/CartIcon.svg'
 import UserIcon from '../Components/assets/UserIcon.svg'
@@ -16,7 +17,7 @@ const Navigate = useNavigate();
         
           <ul id='navbar'>
             <li><Link to='/'> HOME</Link></li>
-            <li><Link to='/'>PRODUCTS</Link></li>
+            <li><HashLink  to='/#productsnavigate' >PRODUCTS</HashLink></li>
             <li><Link to='/signup'>SIGNUP</Link></li>
             <Link to='/login'><li>LOGIN</li></Link>
             <Link to='/Cart'>

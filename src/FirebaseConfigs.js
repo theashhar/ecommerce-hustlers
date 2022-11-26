@@ -4,20 +4,16 @@ import { getAnalytics } from "firebase/analytics";
 import {getAuth} from "firebase/auth";
 import {getFirestore} from "firebase/firestore";
 import {getStorage} from "firebase/storage";
-// import firebase from 'firebase';  
-
-// import firebase from "firebase/compat/app";
-// import "firebase/compat/auth"
-// import "firebase/compat/firestore"
-
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDTHHBBnKYLAe54VuzKCXeXh6LyAn6S8Gs",
-  authDomain: "hustlers-heaven-firebase.firebaseapp.com",
-  projectId: "hustlers-heaven-firebase",
-  storageBucket: "hustlers-heaven-firebase.appspot.com",
-  messagingSenderId: "44510784655",
-  appId: "1:44510784655:web:c5ccc4b9fbd0b2dfeed4fa",
-  measurementId: "G-Z3ZGC1BXES"
+  apiKey: "AIzaSyDcRH43_V1dPpViDs5xDlec0yukU5qF9Dw",
+  authDomain: "hustlers-heaven-webstore.firebaseapp.com",
+  projectId: "hustlers-heaven-webstore",
+  storageBucket: "hustlers-heaven-webstore.appspot.com",
+  messagingSenderId: "808093424362",
+  appId: "1:808093424362:web:7b2a45cf7d0ccc7991d593",
+  measurementId: "G-K60228V1ZX"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

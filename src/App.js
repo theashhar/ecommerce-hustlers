@@ -2,10 +2,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
-
+import Navbar from './Components/Navbar';
 import ProductsList from './Components/ProductsList';
+import Footer from './Components/Footer';
 import Home from './Components/Home';
 import Login from './Components/Login';
 import Signup from './Components/Signup';
@@ -13,7 +16,7 @@ import Cart from './Components/Cart';
 import Profile from './Components/Profile';
 import PgFOF from './Components/PgFOF';
 import ForgotPassword from './Components/ForgotPassword';
-import Navbar from './Components/Navbar';
+
 // import ProductList  from './Components/Product';
 
 
@@ -33,7 +36,21 @@ function App() {
           {/* <Route exact path='/productList' element={<ProductList />}/> */}
           <Route exact path='*' element={<PgFOF />}/>
         </Routes>    
+    <Footer />
+    <ToastContainer
+position="bottom-center"
+autoClose={1800}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
     </BrowserRouter>
+    
   );
 }
 
