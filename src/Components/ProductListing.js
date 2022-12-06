@@ -21,7 +21,7 @@ const CartList = [
               //get each product from array above using product (map)
 const ProductListing = () => {
   return (
-   <main>
+   <main className='w-full overflow-hidden'>
         <div className='cartMainDiv'>
         { CartList.map((product) => (
           <div key={product.id} className='a'>

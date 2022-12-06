@@ -1,13 +1,13 @@
 .cartMainDiv {
     display: flex;
-    justify-content: space-between;
-
-    width: 20%;
-    height: 10%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 0 80px 10px 80px;
 }
 .a {
     display: flex; 
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 20%;
+    height: 10%;
 }
