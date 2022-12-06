@@ -5,11 +5,16 @@ import './NavbarStyle.css'
 import CartIcon from '../Components/assets/CartIcon.svg'
 import UserIcon from '../Components/assets/UserIcon.svg'
 import HustlersHeavenLogo from '../Components/assets/HustlersHeavenLogo.svg'
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 
 const Navbar = () => {
   
+// function GetCurrentUser()
 const Navigate = useNavigate();
+
+
   return (
     <div>
       <section id='header'>
@@ -17,14 +22,30 @@ const Navigate = useNavigate();
         
           <ul id='navbar'>
             <li><Link to='/'> HOME</Link></li>
-            <li><HashLink  to='/#productsnavigate' >PRODUCTS</HashLink></li>
+            <li><HashLink  to='/#ProductSection' >PRODUCTS</HashLink></li>
             <li><Link to='/signup'>SIGNUP</Link></li>
             <Link to='/login'><li>LOGIN</li></Link>
             <Link to='/Cart'>
-              <li className='cartIcon'>
+            <li className='cartIcon'>
+               <Dropdown>
+                <Dropdown.Toggle variant="success" id="dropdown-basic">
+                <img src={CartIcon} alt="no img" id='cartlogo'/>
+                <badge>{10}</badge>
+                </Dropdown.Toggle>
+
+                <Dropdown.Menu>
+                  <span style={{padding:10}}>Cart is Empty</span>
+                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+
+                </Dropdown.Menu>
+               </Dropdown>
+            </li>
+
+
+              {/* <li className='cartIcon'>
                 <img src={CartIcon} alt="no img" id='cartlogo'/>                
                 <span className='cart-icon-css'>1</span>
-              </li>
+              </li> */}
             </Link><Link to='/userprofile'>
               <li className='profile-icon'>
                 <img src={UserIcon} alt="no img" id='User'/>

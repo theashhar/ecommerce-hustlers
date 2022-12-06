@@ -24,6 +24,7 @@ li {
 }
     .cartIcon{
         display: flex;
+       
         align-items: center;
     }
     .cart-icon-css {

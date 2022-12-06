@@ -1,0 +1,16 @@
+#accform {
+
+    margin: 10% auto 10% auto;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 50%;
+    position: relative;
+    border-radius: 5px;
+    box-shadow:  0 1px 12px rgb(156, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 20px;
+
+}

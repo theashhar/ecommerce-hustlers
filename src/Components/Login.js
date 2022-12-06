@@ -1,9 +1,11 @@
 import { Password } from '@mui/icons-material'
-import React, {useState} from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
 import './Login.css'
 import OAuth from '../Components/OAuth';
+import { toast } from 'react-toastify';
+import { signInWithEmailAndPassword, getAuth } from 'firebase/auth';
 
 
 
@@ -14,14 +16,29 @@ const Login = () => {
   password: '',
  });
  const { email, password } = formData;
+ const Navigate= useNavigate();
  function onChange(e) {
   setFormData((prevState)=>({
     ...prevState, [e.target.id]: e.target.value,
-  }))
+  }));
  }
- 
+ async function onSubmit(e) {
+  e.preventDefault()
+  try {
+    const auth = getAuth()
+    const userCredential = await signInWithEmailAndPassword(auth, email, password)
+    if(userCredential.user) {
+      Navigate("/")
+    }     
+  } catch (error) {
+    toast.error("Incorrect username or password")
+
+ }}
+
+
+
   return (
-  <form>
+  <form onSubmit={onSubmit} >
     <div id="cover" className='w-full md:w-[67%] lg:w-[40%]'>
       <h2>Login</h2>
         

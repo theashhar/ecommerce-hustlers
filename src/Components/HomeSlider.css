@@ -11,16 +11,21 @@ img #homeimg1 {
 .info {
     position: absolute;
     top: 35%;
-    left: 4%;
+    right: 60%;
 
 }
     h1 {
         font-family: 'Cormorant';
         font-weight: bold;
-        color: rgb(233, 233, 233);
+        color: rgb(255, 255, 255);
         font-size: 400%;
     }
 .image {
     width: 100%;
 
+}
+.info1 {
+    position: absolute;
+    bottom: 30%;
+    margin-right: 30%;
 }

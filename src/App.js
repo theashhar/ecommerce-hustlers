@@ -16,6 +16,7 @@ import Cart from './Components/Cart';
 import Profile from './Components/Profile';
 import PgFOF from './Components/PgFOF';
 import ForgotPassword from './Components/ForgotPassword';
+import PrivateRoute from './Components/PrivateRoute';
 
 // import ProductList  from './Components/Product';
 
@@ -32,14 +33,16 @@ function App() {
           <Route exact path='/login' element={<Login />}/>
           <Route exact path='/cart' element={<Cart />}/>
           <Route exact path='/forgot-password' element={<ForgotPassword />}/>
-          <Route exact path='/userprofile' element={<Profile />}/>
+          <Route path='/userprofile' element={<PrivateRoute />}>
+            <Route exact path='/userprofile' element={<Profile />}/>
+          </Route>
           {/* <Route exact path='/productList' element={<ProductList />}/> */}
           <Route exact path='*' element={<PgFOF />}/>
         </Routes>    
     <Footer />
     <ToastContainer
 position="bottom-center"
-autoClose={1800}
+autoClose={2500}
 hideProgressBar={false}
 newestOnTop={false}
 closeOnClick

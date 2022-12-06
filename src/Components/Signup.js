@@ -25,6 +25,8 @@ const Signup = () => {
      ...prevState, [e.target.id]: e.target.value,
    }))
   }
+
+
  async function onSubmit(e) {
   //to prevent refreshing of signup page
   e.preventDefault()
@@ -36,27 +38,30 @@ const Signup = () => {
       { displayName: name
       })
     const user = userCredential.user
+    const initialcartvalue = 0;
     console.log(user);
     const  formDataCopy = {...formData}
-    delete formDataCopy.password
+    // delete formDataCopy.password
     formDataCopy.timestamp = serverTimestamp();
 
     await setDoc(doc(db, "users", user.uid), formDataCopy)
     //after user is added to database, he's directed to home page
     Navigate('/');
-  } catch (error) {
-    console.error(error);
-    if (error.message == 'Firebase: Error (auth/email-already-in-use).')
-    {
-      toast.error('Email already exists'); 
-      }
-    else 
-    {
-      toast.error('Something went wrong');
-    }
-  }
+        } catch (error) {
+          console.error(error);
+          if (error.message == 'Firebase: Error (auth/email-already-in-use).')
+          {
+            toast.error('Email already exists'); 
+            }
+          else 
+          {
+            toast.error('Something went wrong');
+          }
+        }
  }
 
+
+ 
   return (
     <form onSubmit={onSubmit}>
     <div id="cover" className='w-full md:w-[67%] lg:w-[40%]'>
