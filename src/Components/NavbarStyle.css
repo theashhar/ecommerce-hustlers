@@ -10,8 +10,8 @@
     background-color: rgb(255, 255, 255, 0.7);
     box-shadow: 0 1px 12px  rgb(156, 156, 156);;
 }
-li:hover { transform: scale(1.1);}
-li {
+.profile-icon:hover, .cartIcon:hover, .li:hover { transform: scale(1.1);}
+.li, .profile-icon, .cartIcon{
     transition: .2s;
 }
 #navbar {
@@ -32,6 +32,7 @@ li {
     }
 .HHlogo  {
     width: 220px;
+    margin-right: 40px;
     padding-bottom: 3px;
     cursor: pointer;
 }

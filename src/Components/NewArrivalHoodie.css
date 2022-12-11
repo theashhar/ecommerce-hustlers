@@ -1,9 +1,10 @@
-h2 {
+#NewArrival-sec {
     font-family: 'Cormorant';
     font-weight: bold;
     color: #29496D;
     font-size: 50px;
     margin-left: 4%;
+    margin-top: 5%;
     }
 .hoodie-img {
     position: relative;

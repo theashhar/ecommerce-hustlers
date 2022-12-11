@@ -24,7 +24,7 @@ const ProductListing = () => {
    <main className='w-full overflow-hidden'>
         <div className='cartMainDiv'>
         { CartList.map((product) => (
-          <div key={product.id} className='a'>
+          <div key={product.id} className='ab'>
             <CartComponent product={product}  />
           </div>
         ))}

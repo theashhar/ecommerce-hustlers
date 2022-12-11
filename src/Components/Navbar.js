@@ -21,10 +21,10 @@ const Navigate = useNavigate();
       <img src={HustlersHeavenLogo} onClick={()=>Navigate('/')} alt="Logo" className='HHlogo'/>
         
           <ul id='navbar'>
-            <li><Link to='/'> HOME</Link></li>
-            <li><HashLink  to='/#ProductSection' >PRODUCTS</HashLink></li>
-            <li><Link to='/signup'>SIGNUP</Link></li>
-            <Link to='/login'><li>LOGIN</li></Link>
+            <li className='li'><Link to='/'> HOME</Link></li>
+            <li className='li'><HashLink  to='/#ProductSection' >PRODUCTS</HashLink></li>
+            <li className='li'><Link to='/signup'>SIGNUP</Link></li>
+            <Link to='/login'><li className='li'>LOGIN</li></Link>
             <Link to='/Cart'>
             <li className='cartIcon'>
                <Dropdown>
