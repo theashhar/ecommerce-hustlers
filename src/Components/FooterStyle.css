@@ -1,9 +1,22 @@
 .footer {
     background-color: #2c496d;
+    overflow: hidden;
 
 }
+.footer-col ul{
+    padding: 0;
+    margin: 0px 30px 0 0;
+}
+
+div ul li Iframe{
+    width: 230px;
+    height: 140px;
+    border-radius: 10px;
+}
 .footer-col {
-padding: 0 15px;
+
+margin: 0 auto;
+padding: 15px 0px 15px 10px;
 }
 .footer-col h5{
     color: #ffffff;
@@ -13,7 +26,7 @@ padding: 0 15px;
 }
 .footer-col ul li {
     font-size: small;
-    color: #ffffff;
+
     text-decoration: inherit;
 
     font-weight: 300;
@@ -27,26 +40,27 @@ padding: 0 15px;
     left: 0;
     bottom: -10px;
     background-color: #ffffff;
-    height: 2px;
+    height: 2px;v
     box-sizing: border-box;
     width: 50px;
 } */
 
 .row {
+    
     margin: auto;    
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, auto));
     gap: 1.5rem;
-    margin-top: 4rem;
-    padding: 50px 50px 50px 50px;
+    margin-top: 3rem;
+    padding: 0px 30px 20px 30px;
     
 
 }
 .socialIcon {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 .footerlogo {
     width: 80%;
-
+    padding-bottom: 12px;
 }

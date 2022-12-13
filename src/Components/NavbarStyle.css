@@ -8,19 +8,20 @@
     justify-content: space-between;
     padding: 5px 65px 5px 65px;
     background-color: rgb(255, 255, 255, 0.7);
-    box-shadow: 0 1px 12px  rgb(156, 156, 156);;
+    box-shadow: 0 1px 12px  rgb(156, 156, 156);
 }
 .profile-icon:hover, .cartIcon:hover, .li:hover { transform: scale(1.1);}
 .li, .profile-icon, .cartIcon{
     transition: .2s;
 }
-#navbar {
+.navbar {
     display: flex;
     align-items: center;
     column-gap: 25px;
     margin-top: 8px;
     margin-bottom: 10px;
     font-size: 15px;
+
 }
     .cartIcon{
         display: flex;
@@ -41,5 +42,44 @@
 }
 .profile-icon {
     width: 27px;
+
+}
+
+
+.mobileNav {
+    display: none;
+}
+
+
+
+@media (max-width:799px) {
+    .navbar{
+        margin: 0 ;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        right: -300px;
+        top: 0;
+        height: 100vh;
+        width: 250px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 30px 40px rgba(54, 54, 54, 0.5);
+        padding: 40px 0 0 35px;
+        transition: .3s;
+    }  
+    .mobileNav{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        position: absolute;
+        right: 0;
+        /*position of hamburger from tight*/
+        padding-right: 20px;
+    } 
+    #navbar.active{
+        right: 0px;
+    }
 
 }
