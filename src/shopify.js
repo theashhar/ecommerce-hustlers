@@ -60,8 +60,8 @@ function checkcartforup(){
   })
 }
 const client = ShopifyBuy.buildClient({
-  domain: 'yourdomain.myshopify.com',
-  storefrontAccessToken: 'youraccesstoken'
+  domain: 'hustlersheaven.myshopify.com',
+  storefrontAccessToken: 'c9716e8fc531f96eadb76bd4c498484d'
 });
 //
 const productsQuery = client.graphQLClient.query((root) => {
