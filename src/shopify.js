@@ -55,7 +55,6 @@ function checkcartforup(){
     if(!search[varid[_i]]){
       delete cart[_i]
       cartCountfn()
-      ons.notification.alert('Some Out of stock products have been removed from your cart');
     }
   })
 }
@@ -189,7 +188,7 @@ myHeaders.append("Content-Type", "application/json");
     "shipping_address": {
       "first_name": orderAddressx.name,
       "last_name": orderAddressx.name,
-      "address1": orderAddressx.flat + ' Locality - ' + orderAddressx.locality,
+      "address1": orderAddressx.flat,
       "address2": orderAddressx.landmark,
       "phone": phoneNo,
       "city": "Bhagalpur",
