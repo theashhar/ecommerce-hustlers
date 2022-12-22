@@ -4,9 +4,9 @@ import './ProductListing.css';
 import CartComponent from './CartComponent'
 import display_hoodie2 from '../Components/assets/display_hoodie2.jpg';
 import display_hoodie1 from '../Components/assets/display_hoodie1.jpg';
-
+import { getAllProducts } from '../shopify';
 // item  xs={6} sm={6} md={4} lg={2 }
-
+console.log(getAllProducts())
 const CartList = [
     {id: 1, name:'black hoodie', description: 'High Quality Versatile Hoodie', price: '₹999', image: display_hoodie2,},
     {id: 2, name:'Blue hoodie', description: 'High Quality Versatile Hoodie', price: '₹899', image: display_hoodie1,},

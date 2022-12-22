@@ -2,7 +2,7 @@ import React from 'react'
 import { Card, CardMedia, CardContent, CardActions, Typography, IconButton} from '@mui/material'
 import { AddShoppingCart }  from '@mui/icons-material'
 import {FaCartPlus } from 'react-icons/fa'
-
+import {addtocart} from '../shopify'
 
 // import Button from 'react-bootstrap/Button';
 // import Card from 'react-bootstrap/Card';
@@ -98,7 +98,10 @@ const CartComponent = ({ product }) => {
         {product.description}
       </h5>
     </div > 
-    <div id='shopping-cart'>
+    <div id='shopping-cart' onClick={(e)=>{
+      e.target.innerText = 'Added to Cart'
+      addtocart(product.id)
+    }}>
       <span>Add to Cart</span>
     <FaCartPlus />
     </div>

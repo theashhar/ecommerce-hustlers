@@ -66,7 +66,9 @@ const[showNavbar, setShowNavbar] = useState(false);
 
               <li className='cartIcon'>
                 <img src={CartIcon} alt="no img" id='cartlogo'/>                
-                <span className='cart-icon-css'>1</span>
+                <span className='cart-icon-css'>{
+                  JSON.parse(localStorage.getItem('cart')) ? Object.values(JSON.parse(localStorage.getItem('cart'))).map(i => i.q) : 0
+                }</span>
               </li>
             </Link><Link to='/userprofile'>
               <li className='profile-icon'>

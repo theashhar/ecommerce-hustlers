@@ -49,6 +49,18 @@ function cartCountfn(){
    })
    }
 }
+// cart functions
+
+function addtocart(id){
+  let cart = JSON.parse(localStorage.cart || '{}')
+  if(cart[id]){
+    cart[id].q += 1
+  }
+  else{
+    cart[id] = {q:1}
+  }
+  localStorage.cart = JSON.stringify(cart)
+}
 
 function checkcartforup(){
   Object.keys(cart).forEach(_i=>{
@@ -210,5 +222,6 @@ module.exports = {
   getCollections,
   getCollectionProducts,
   cartCountfn,
-  productsQuery
+  productsQuery,
+  addtocart
 }
