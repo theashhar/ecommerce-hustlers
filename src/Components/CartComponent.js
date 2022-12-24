@@ -80,19 +80,20 @@ import display_hoodie2 from '../Components/assets/display_hoodie2.jpg';
   */}
 
 const CartComponent = ({ product }) => {
+  console.log(product)
     const classes = useStyles();
   return (
 
 
 <section id='productContainer'>
   <div className='product'>
-    <img src={product.image} id='productimg' /> 
+    <img src={product.images[0].src} id='productimg' /> 
     <div className='name'>
       <h4 id='h4name'>              
-        {product.name}
+        {product.title}
       </h4>
       <span id='ProductPrice'>              
-        {product.price}
+        {product.variants[0].price.amount}
       </span>
       <h5 id='ProductDescription'>              
         {product.description}
