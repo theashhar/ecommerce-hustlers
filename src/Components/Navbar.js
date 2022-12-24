@@ -11,8 +11,7 @@ import CartIcon from '../Components/assets/CartIcon.svg'
 import UserIcon from '../Components/assets/UserIcon.svg'
 import HustlersHeavenLogo from '../Components/assets/HustlersHeavenLogo.svg'
 import Dropdown from 'react-bootstrap/Dropdown';
-
-
+import { cartCountfn } from '../shopify';
 
 const Navbar = () => {
   
@@ -67,7 +66,7 @@ const[showNavbar, setShowNavbar] = useState(false);
               <li className='cartIcon'>
                 <img src={CartIcon} alt="no img" id='cartlogo'/>                
                 <span className='cart-icon-css'>{
-                  JSON.parse(localStorage.getItem('cart')) ? Object.values(JSON.parse(localStorage.getItem('cart'))).map(i => i.q) : 0
+                  cartCountfn()
                 }</span>
               </li>
             </Link><Link to='/userprofile'>

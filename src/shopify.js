@@ -36,18 +36,7 @@ function cartCountfn(){
        Object.values(cart).forEach(_e=>{
                 c += _e.q
        })
-   if(c !== 0){
-     localStorage.cart = JSON.stringify(cart)
-     document.querySelectorAll('.cartCount').forEach(_el=>{
-      _el.style.display = 'inline' 
-      _el.innerHTML = c
-   })
-   }else{
-     localStorage.cart = JSON.stringify(cart)
-      document.querySelectorAll('.cartCount').forEach(_el=>{
-      _el.style.display = 'none' 
-   })
-   }
+        return c
 }
 // cart functions
 
