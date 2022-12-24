@@ -4,7 +4,7 @@ h3 {
     font-weight: 700;
     color:rgb(255, 255, 255)
 }
-p {
+.s-box p, .s-box-centre p {
     color:rgb(255, 255, 255)
 }
 .service-bg{
@@ -15,7 +15,7 @@ p {
 }
 .service-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(150px, auto));
     gap: 1.5rem;
     margin-top: 4rem;
     
@@ -38,4 +38,43 @@ p {
 .s-box-centre {
     text-align: center;
     padding: px 0px 0px 0px;
+}
+
+
+@media (max-width:799px){
+    .service-container 
+        {
+    grid-template-columns: repeat(auto-fit, minmax(40px, auto));
+       transform: scale(0.7);
+       display: grid;
+       gap: 1.5rem;
+       margin-top: 0;    
+       margin-right: 5%;
+       margin-left: 5%;
+       padding: 0 auto;
+    }
+    .s-box {
+        padding: 0 0 0 0;
+    }
+            .s-box img {
+                width: 26px;
+                margin: auto;
+            }   
+            .s-box-centre img{
+                width: 70px;
+                margin: auto; 
+            }
+            .s-box h3, .s-box-centre h3  {
+                font-size: medium ;
+            }
+            .s-box p, .s-box-centre p{
+                font-size: 11px;
+                font-weight: 300;
+            }
+
+    .service-bg{
+        background-color: #29496D;
+        padding: 1px 0px 0px 0px;
+    }
+
 }
