@@ -101,7 +101,7 @@ const CartComponent = ({ product }) => {
     </div > 
     <div id='shopping-cart' onClick={(e)=>{
       e.target.innerText = 'Added to Cart'
-      addtocart(product.id)
+      addtocart(product)
     }}>
       <span>Add to Cart</span>
     <FaCartPlus />

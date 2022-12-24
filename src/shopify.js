@@ -39,26 +39,27 @@ function cartCountfn(){
         return c
 }
 // cart functions
-
-function addtocart(id){
+function cartTotal(){
+   let total = 0
+   let cart = JSON.parse(localStorage.cart || '{}')
+   Object.values(cart).forEach(p=>{
+    total += p.q * p.variants[0].price.amount
+   })
+   return total
+}
+function addtocart(product){
   let cart = JSON.parse(localStorage.cart || '{}')
-  if(cart[id]){
-    cart[id].q += 1
+  if(cart[product.id]){
+    cart[product.id].q += 1
   }
   else{
-    cart[id] = {q:1}
+    cart[product.id] = product
+    cart[product.id].q = 1
   }
   localStorage.cart = JSON.stringify(cart)
 }
 
-function checkcartforup(){
-  Object.keys(cart).forEach(_i=>{
-    if(!search[varid[_i]]){
-      delete cart[_i]
-      cartCountfn()
-    }
-  })
-}
+
 const client = ShopifyBuy.buildClient({
   domain: 'hustlersheaven.myshopify.com',
   storefrontAccessToken: 'c9716e8fc531f96eadb76bd4c498484d'
@@ -81,38 +82,6 @@ async function checkNext(arr){
     nextx = false
   }
   return nextx
-}
-
-async function searchArray(){
-  search.ready = false;
-  await client.product.fetchAll(250).then((model) => {
-    model.forEach(_p=>{
-    if(_p.id){
-      let s = _p.title + ' ' +_p.description
-      search[_p.id] = s.split(' ')
-      Sproducts[_p.id] = _p.title
-     }
-    })
-  let chekx
-  chekx = (a)=>{
-    checkNext(a).then(_e=>{
-      if(_e){
-        _e.forEach(_p=>{
-         if(_p.id){
-         let s = _p.title + ' ' +_p.description
-         search[_p.id] = s.split(' ')
-         Sproducts[_p.id] = _p.title
-         }
-       })
-        chekx(_e)
-      }else{
-         search.ready = true;
-         checkcartforup()
-      }
-    })
-  }
-  chekx(model)
-  });
 }
 
 async function getProduct(productId){
@@ -205,12 +174,12 @@ module.exports = {
   varid,
   search,
   Sproducts,
-  searchArray,
   getAllProducts,
   getProduct,
   getCollections,
   getCollectionProducts,
   cartCountfn,
   productsQuery,
-  addtocart
+  addtocart,
+  cartTotal
 }
