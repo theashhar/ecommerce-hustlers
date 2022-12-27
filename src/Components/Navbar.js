@@ -46,7 +46,7 @@ const[showNavbar, setShowNavbar] = useState(false);
             <li className='li'><HashLink  to='/#ProductSection' >PRODUCTS</HashLink></li>
             <li className='li'><Link to='/signup'>SIGNUP</Link></li>
             <Link to='/login'><li className='li'>LOGIN</li></Link>
-            <Link to='/Cart'>
+            <a href='/Cart'>
             {/* <li className='cartIcon'>
                <Dropdown>
                 <Dropdown.Toggle variant="success" id="dropdown-basic">
@@ -69,7 +69,7 @@ const[showNavbar, setShowNavbar] = useState(false);
                   cartCountfn()
                 }</span>
               </li>
-            </Link><Link to='/userprofile'>
+            </a><Link to='/userprofile'>
               <li className='profile-icon'>
                 <img src={UserIcon} alt="no img" id='User'/>
               </li>
