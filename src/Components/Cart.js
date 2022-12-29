@@ -94,7 +94,7 @@ export default function Cart() {
               </button>
             </div>
           </section>
-        </form>):(<div className="mt-12 font-bold text-center">
+        </form>:(<div className="mt-12 font-bold text-center">
             Cart is empty
           </div>
           )
