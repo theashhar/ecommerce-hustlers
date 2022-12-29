@@ -3,13 +3,14 @@ import { useEffect, useState } from 'react'
 import { cartTotal } from '../shopify';
 export default function Cart() {
   const [cart,setCart] = useState({});
+  const [refresh,setRefresh] = useState(Math.random());
   useEffect(()=>{
     setCart(JSON.parse(localStorage.getItem('cart')))
-  },[])
+  },[refresh])
   return (
     <div className="bg-white">
       <div className="mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shoppouting Cart</h1>
+        <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Shopping Cart</h1>
         <form className="mt-12 lg:grid lg:grid-cols-12 lg:items-start lg:gap-x-12 xl:gap-x-16">
           <section aria-labelledby="cart-heading" className="lg:col-span-7">
             <h2 id="cart-heading" className="sr-only">
@@ -49,7 +50,13 @@ export default function Cart() {
                         }
 
                         <div className="absolute top-0 right-0">
-                          <button type="button" className="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500">
+                          <button type="button" className="-m-2 inline-flex p-2 text-gray-400 hover:text-gray-500" 
+                          onClick={()=>{
+                            let cart = JSON.parse(localStorage.getItem('cart'));
+                            delete cart[product.id];
+                            localStorage.setItem('cart',JSON.stringify(cart));
+                            setRefresh(Math.random());
+                          }}>
                             <span className="sr-only">Remove</span>
                             <XMarkIcon className="h-5 w-5" aria-hidden="true" />
                           </button>
@@ -87,7 +94,10 @@ export default function Cart() {
               </button>
             </div>
           </section>
-        </form>
+        </form>):(<div className="mt-12 font-bold text-center">
+            Cart is empty
+          </div>
+          )}
       </div>
     </div>
   )
