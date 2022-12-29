@@ -5,7 +5,7 @@ export default function Cart() {
   const [cart,setCart] = useState({});
   const [refresh,setRefresh] = useState(Math.random());
   useEffect(()=>{
-    setCart(JSON.parse(localStorage.getItem('cart')))
+    setCart(JSON.parse(localStorage.getItem('cart')) || {})
   },[refresh])
   return (
     <div className="bg-white">
