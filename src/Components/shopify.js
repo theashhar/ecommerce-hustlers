@@ -163,23 +163,4 @@ function placeOrder(){
   })
 }
 
-module.exports = {
-  cart,
-  addressArray,
-  placeOrder,
-  currentOrder,
-  pastOrders,
-  varid,
-  search,
-  Sproducts,
-  getAllProducts,
-  getProduct,
-  getCollections,
-  getCollectionProducts,
-  cartCountfn,
-  productsQuery,
-  addtocart,
-  cartTotal,
-  phoneNo,
-  checkout
-}
+export {cart, cartCountfn, cartTotal, addtocart, client, productsQuery, getProduct, getAllProducts, getCollections, getCollectionProducts, checkout, placeOrder, phoneNo, addressArray, currentOrder, pastOrders, varid, search, Sproducts}
