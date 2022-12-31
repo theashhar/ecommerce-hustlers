@@ -20,7 +20,6 @@ if(localStorage.pastOrders){
 if(localStorage.currentOrder){
   currentOrder = JSON.parse(localStorage.currentOrder)
 }
-let orderAddressx
 let varid = {}
 if(localStorage.varid){
   varid = JSON.parse(localStorage.varid)
@@ -47,6 +46,7 @@ function cartTotal(){
    })
    return total
 }
+
 function addtocart(product){
   let cart = JSON.parse(localStorage.cart || '{}')
   if(cart[product.id]){
@@ -72,17 +72,6 @@ const productsQuery = client.graphQLClient.query((root) => {
     product.add('id');
   });
 });
-async function checkNext(arr){
-  let nextx
-  if(arr[arr.length - 1].hasNextPage){
-    await client.fetchNextPage(arr).then((next) => {
-      nextx = next.model
-    });
-  }else{
-    nextx = false
-  }
-  return nextx
-}
 
 async function getProduct(productId){
   let p
@@ -112,39 +101,51 @@ async function getCollectionProducts(id){
   return await client.collection.fetchWithProducts(id, {productsFirst: 250})
 }
 
-async function checkout(){
-            let c
-                let lineItemsToAdd = []
-            for(let key in cart){
-                lineItemsToAdd.push({
-                    variant_id: decodeURIComponent(escape(window.atob( key ))).substr(29),
-                    quantity: cart[key].q
-                })
-            }
-            let myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-            let raw = JSON.stringify({
-  "order": {
-    "test": true,
-    "financial_status": "pending",
-    "note": 0,
-    "phone": "+91"+phoneNo,
-    "shipping_address": {
-      "first_name": orderAddressx.name,
-      "last_name": orderAddressx.name,
-      "address1": orderAddressx.flat,
-      "address2": orderAddressx.landmark,
-      "phone": phoneNo,
-      "city": orderAddressx.city,
-      "province": orderAddressx.state,
-      "country": orderAddressx.country,
-      "zip": orderAddressx.zip
-    },
-    "buyer_accepts_marketing": true,
-    "line_items": lineItemsToAdd
+async function checkout(userDetails){
+  let lineItemsToAdd = []
+  for(let key in cart){
+      lineItemsToAdd.push({
+          variant_id: cart[key].variants[0].id.split('gid://shopify/ProductVariant/')[1],
+          quantity: cart[key].q
+      })
   }
-});
-console.log(raw)
+    let raw = JSON.stringify({
+      "order": {
+        "test": true,
+        "financial_status": "pending",
+        "phone": userDetails.phone,
+        "email": userDetails["email-address"],
+        "shipping_address": {
+          "first_name": userDetails["first-name"],
+          "last_name": userDetails["last-name"],
+          "address1": userDetails.address,
+          "address2": userDetails.apartment,
+          "phone": userDetails.phone,
+          "city": userDetails.city,
+          "province": userDetails.region,
+          "country": userDetails.country,
+          "zip": userDetails["postal-code"]
+        },
+        "buyer_accepts_marketing": true,
+        "line_items": lineItemsToAdd
+      }
+  });
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var requestOptions = {
+    method: 'POST',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+  };
+
+  fetch("https://expressjs-mongoose-production-481d.up.railway.app/orders", requestOptions)
+    .then(response => response.json())
+    .then(result => {
+      window.location.href = result.order.order_status_url
+    })
+    .catch(error => console.log('error', error));
 }
       
 function placeOrder(){
@@ -156,7 +157,6 @@ function placeOrder(){
       localStorage.pastOrders = JSON.stringify(pastOrders)
       cart = {}
       cartCountfn()
-      
     }else{
       
     }
@@ -164,13 +164,11 @@ function placeOrder(){
 }
 
 module.exports = {
-   cart,
-  phoneNo,
+  cart,
   addressArray,
   placeOrder,
   currentOrder,
   pastOrders,
-  orderAddressx,
   varid,
   search,
   Sproducts,
@@ -181,5 +179,7 @@ module.exports = {
   cartCountfn,
   productsQuery,
   addtocart,
-  cartTotal
+  cartTotal,
+  phoneNo,
+  checkout
 }

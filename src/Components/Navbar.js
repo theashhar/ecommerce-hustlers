@@ -11,7 +11,7 @@ import CartIcon from '../Components/assets/CartIcon.svg'
 import UserIcon from '../Components/assets/UserIcon.svg'
 import HustlersHeavenLogo from '../Components/assets/HustlersHeavenLogo.svg'
 import Dropdown from 'react-bootstrap/Dropdown';
-import { cartCountfn } from '../shopify';
+import { cartCountfn } from './shopify.js';
 
 const Navbar = () => {
   

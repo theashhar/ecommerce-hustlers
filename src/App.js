@@ -18,6 +18,7 @@ import PgFOF from './Components/PgFOF';
 import ForgotPassword from './Components/ForgotPassword';
 import PrivateRoute from './Components/PrivateRoute';
 import ProductOverview from './Components/ProductOverview';
+import Checkout from './Components/Checkout';
 // import ProductList  from './Components/Product';
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='/signup' element={<Signup />}/>
           <Route exact path='/login' element={<Login />}/>
           <Route exact path='/cart' element={<Cart />}/>
+          <Route exact path='/checkout' element={<Checkout />}/>
           <Route exact path='/product/:id' element={<ProductOverview />}/>
           <Route exact path='/forgot-password' element={<ForgotPassword />}/>
           <Route path='/userprofile' element={<PrivateRoute />}>

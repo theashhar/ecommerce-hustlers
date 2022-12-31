@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {FaCartPlus } from 'react-icons/fa'
-import {addtocart} from '../shopify'
+import {addtocart} from './shopify.js'
 
 import useStyles from './styles'
 import './CartComponent.css';

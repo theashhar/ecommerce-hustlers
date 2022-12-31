@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { StarIcon } from '@heroicons/react/20/solid'
 import { GlobeAmericasIcon, TruckIcon } from '@heroicons/react/24/outline'
 import { useParams } from 'react-router-dom'
-import {getProduct, addtocart} from '../shopify'
+import {getProduct, addtocart} from './shopify.js'
 
 const policies = [
   { name: 'Return Policy', icon: GlobeAmericasIcon, description: 'Enter Return Policy' },
@@ -64,7 +64,7 @@ export default function ProductOverview() {
                     key={image.id}
                     src={image.src}
                     alt="product"
-                    className="lg:col-span-2 lg:row-span-2 rounded-lg"
+                    className="lg:col-span-2 lg:row-span-2 rounded-lg max-w-sm"
                   />
                 ))}
               </div>
