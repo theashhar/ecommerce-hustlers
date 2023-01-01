@@ -5,20 +5,15 @@
     /* font-family: 'Cormorant'; */
 }
 
-img #homeimg1 {
-    
-}
-.info {
-    position: absolute;
-    top: 35%;
-    right: 60%;
 
-}
-    h1 {
+    h1.tagline {
         font-family: 'Cormorant';
         font-weight: bold;
         color: rgb(255, 255, 255);
         font-size: 400%;
+    }
+    h4.shopnow {
+        font-size: 23px;
     }
 .image {
     width: 100%;
@@ -27,6 +22,56 @@ img #homeimg1 {
 .info1 {
     position: absolute;
     bottom: 30%;
-    margin-right: 130%;
+    left: 0;
+}
+#homeimgMob, #homeimg2Mob {
+    display: none;
+}
+#homeimg1, #homeimg2{
+    display: block;
+    width: 100%;
+}
+.btn-sm {
+
+    box-shadow: 5px 8px 10px rgba(54, 54, 54, 0.7);
+    border-color: #2c496d;
+    border-radius: 2px;
+    text-decoration: none !important;
+    background-color: #2c496d;        
+}
+.shopnow {
+    color: aliceblue;
+}
+
+@media (max-width:799px) {
+    h1.tagline {
+        font-size: 160%
+    }
+    .info1 {
+        position: absolute;
+        bottom: 30%;
+        left: 0; 
+    }
+    h4.shopnow {
+        font-size: 15px;
+    }
+    #homeimg1,  #homeimg2 {
+        display: none;
+    }
+    #homeimgMob, #homeimg2Mob {
+        display: block;
+        width: 100%;
+    }
+    .btn-sm {
+
+        box-shadow: 5px 8px 10px rgba(54, 54, 54, 0.7);
+        border-color: #2c496d;
+        border-radius: 2px;
+        text-decoration: none !important;
+        background-color: #2c496d;        
+    }
+    .shopnow {
+        color: aliceblue;
+    }
 
 }

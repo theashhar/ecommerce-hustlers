@@ -38,8 +38,8 @@ const Footer = () => {
           <div className='footer-col'>
             <h5>FOLLOW US</h5>
             <ul className='socialIcon'>
-              <Link to='/'><li><AiFillInstagram  size={20} /></li></Link>
-              <Link to='/'><li><AiFillFacebook size={20} /></li></Link>
+            <a href="https://www.instagram.com/hustlersheaven_/" target="_blank"><li><AiFillInstagram  size={20} /></li></a>
+              <a href="https://www.instagram.com/hustlersheaven_/" target="_blank"><li><AiFillFacebook size={20} /></li></a>
             </ul>
 
           
