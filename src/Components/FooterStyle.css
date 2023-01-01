@@ -1,8 +1,13 @@
 .footer {
     background-color: #2c496d;
     overflow: hidden;
+    margin-top: 120px;
+    /* position: absolute;
+    width: 100%;
+    bottom: 0px; */
 
 }
+
 .footer-col ul{
     padding: 0;
     margin: 0px 30px 0 0;
@@ -24,26 +29,19 @@ padding: 15px 0px 15px 10px;
     margin-top: 10px;
     font-weight: bold;
 }
+a{
+    text-decoration: none;
+} 
 .footer-col ul li {
     font-size: small;
-
-    text-decoration: inherit;
+    
+    text-decoration: none;
 
     font-weight: 300;
-    color: #bbbbbb;
+    color: #c5c5c5;
     display: block;
 }
 
-/* .footer-col h4::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    background-color: #ffffff;
-    height: 2px;v
-    box-sizing: border-box;
-    width: 50px;
-} */
 
 .row {
     

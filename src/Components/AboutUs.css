@@ -1,0 +1,23 @@
+#aboutUs p {
+    text-align: justify;
+    padding: 0 60px 0 60px;
+}
+#aboutUs h2 {
+    font-family: 'Cormorant';
+    font-weight: bold;
+    color: #29496D;
+    font-size: 35px;
+    text-align: center;
+    margin: 10% 0 2% 0; 
+}
+#aboutUs h4 {
+    padding: 0 60px 0 60px;
+}
+@media (max-width:799px) {
+    #aboutUs h2 {
+        margin: 20% 0 4% 0;
+    }
+    #aboutUs p {
+        padding: 0 40px 0 40px;
+    }
+}

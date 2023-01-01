@@ -95,7 +95,7 @@ export default function Cart() {
             </div>
           </section>
         </form>:(<div className="mt-12 font-bold text-center">
-            Cart is empty
+            Your are lacking Hustle. Your cart is empty
           </div>
           )}
       </div>

@@ -71,8 +71,8 @@ const Signup = () => {
           <input type="email" id='email'  placeholder=" *Email" value={email} onChange={onChange} />            
           <input type={showPassword ? "text" : "password"} id='password' placeholder=" *Password" value={password} onChange={onChange} />
           {showPassword ?
-          (<AiFillEyeInvisible className='absolute right-16 bottom-52' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />):
-          (<AiFillEye  className='absolute right-16 bottom-52' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />)} 
+          (<AiFillEyeInvisible className='eyeiconSignup' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />):
+          (<AiFillEye  className='eyeiconSignup' cursor='pointer' onClick={()=> setShowPassword((prevState)=>!prevState)} />)} 
 
           <div>
             <p2 >Have an account? 

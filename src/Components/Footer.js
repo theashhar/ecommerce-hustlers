@@ -4,6 +4,7 @@ import Iframe from 'react-iframe'
 import {AiFillInstagram, AiFillFacebook } from 'react-icons/ai'
 import { MdLocationOn } from 'react-icons/md'
 import { Link, useNavigate,} from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link';
 import './FooterStyle.css'
 
 import HustlersHeavenLogoWhite from '../Components/assets/HustlersHeavenLogoWhite.svg'
@@ -29,9 +30,9 @@ const Footer = () => {
             <h5>COMPANY</h5>
             <ul>
 
-              <Link to='/'><li> About</li></Link>
-              <Link to='/'><li>Privacy Policy</li></Link>
-              <Link to='/'><li>Return Policy</li></Link>
+              <Link to='/aboutus'><li> About</li></Link>
+              <HashLink to='/aboutus'><li>Privacy Policy</li></HashLink>
+              <HashLink to='/aboutus'><li>Return Policy</li></HashLink>
             </ul>
           </div>
           <div className='footer-col'>

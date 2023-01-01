@@ -43,26 +43,11 @@ const[showNavbar, setShowNavbar] = useState(false);
         
           <ul className={showNavbar ? 'navbar mobileNav': 'navbar'} >
             <li className='li'><Link to='/'> HOME</Link></li>
-            <li className='li'><HashLink  to='/#ProductSection' >PRODUCTS</HashLink></li>
+            <li className='li'><HashLink  to='/#NewArrival-sec' >PRODUCTS</HashLink></li>
             <li className='li'><Link to='/signup'>SIGNUP</Link></li>
             <Link to='/login'><li className='li'>LOGIN</li></Link>
-            <a href='/Cart'>
-            {/* <li className='cartIcon'>
-               <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                <img src={CartIcon} alt="no img" id='cartlogo'/>
-                <badge>{10}</badge>
-                </Dropdown.Toggle>
 
-                <Dropdown.Menu>
-                  <span style={{padding:10}}>Cart is Empty</span>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-
-                </Dropdown.Menu>
-               </Dropdown>
-            </li> */}
-
-
+            <a href='/Cart'>           
               <li className='cartIcon'>
                 <img src={CartIcon} alt="no img" id='cartlogo'/>                
                 <span className='cart-icon-css'>{
@@ -84,38 +69,7 @@ const[showNavbar, setShowNavbar] = useState(false);
 
 
       </section>
-      {/* <nav id='navbar'>
-        
-        <img src={HustlersHeavenLogo} alt="Logo" />
-      
-
-        <div className='cart-btn'>
-          <ul className='components-list'>
-            <Link to='/'> <li >HOME</li></Link>
-            <Link to='/signup'><li>SIGNUP</li></Link>
-            <Link to='/login'><li>LOGIN</li></Link>
-            <Link to='/Cart'>
-              <li>
-                <img src={CartIcon} alt="no img" />
-                <span className='cart-icon-css'>0</span>
-              </li>
-            </Link>
-            <Link to='userprofile'>
-              <li>
-                <img src={UserIcon} className='profile-icon' />
-              </li>
-            </Link>
-              
-
-          </ul>
-        </div>
-        <div>
-
-
-          
-
-        </div>
-      </nav> */}
+  
     </div>
   )
 }

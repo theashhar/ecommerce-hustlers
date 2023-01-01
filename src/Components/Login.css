@@ -15,14 +15,15 @@
     display: flex;
     justify-content: space-between;
     column-gap: 15px;
+    padding-left: 15px;
 }
-
 
 #cover {
 
-    margin: 10% auto 10% auto;
+    margin: 15% auto 20% auto;
+    padding: 25px 0 40px 0;
     background-color: rgb(255, 255, 255);
-    width: 40%;
+    width: 50%;
     height: 50%;
     position: relative;
     border-radius: 5px;
@@ -34,6 +35,17 @@
     row-gap: 20px;
 
 }
+.eyeiconLogin {
+    position: absolute;
+    top: 150px;
+    right: 30px;
+}
+.eyeiconSignup {
+    position: absolute;
+    top: 200px;
+    right: 30px;
+}
+
 .alt-login {
     width: 80%;
     height: 3em;
@@ -57,12 +69,12 @@
 input {
     position: relative;
     border: none;
-    background-color: rgb(229, 226, 226);
+    background-color: rgb(229, 226, 226) !important;
     width: 80%;
-    border-radius: 0.25em;
+    border-radius: 0.25em !important;
     text-align: center;
-    padding: 5px;
-    font-size: 18px;
+    padding: 5px !important;
+    font-size: 18px !important;
     /* margin: -8px; */
 }
 
@@ -83,23 +95,18 @@ input:focus {
     color: rgb(255, 255, 255);
     box-shadow: 10px #222222;
 }
-/* #orborder{
-    before
-    border: 2px solid rgb(46, 46, 46);
-    } */
+
 
  .login-btn:hover { transform: scale(1.05);}
  .google:hover { transform: scale(1.05);}
  .google {
     transition: 0.3s;
  }
-.text {
-    position: relative;
-    bottom: 0.5%;
-}
 
-.hide {
-    position: absolute;
-    transform: scale(0);
-}
 
+ @media (max-width:799px) {
+    #cover {
+        width: 70%;
+        margin-top: 15%;
+    }
+}

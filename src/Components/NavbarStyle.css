@@ -1,19 +1,29 @@
 #header {
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
     width: 100%;
     display: flex;
     align-items: center;
     margin: auto;
     margin-top: 0;
     justify-content: space-between;
-    padding: 5px 65px 5px 65px;
+    padding: 0px 65px 0px 65px;
     background-color: rgb(255, 255, 255, 0.7);
     box-shadow: 0 1px 12px  rgb(156, 156, 156);
+    z-index: 20;
 }
 .profile-icon:hover, .cartIcon:hover, .li:hover { transform: scale(1.1);}
 .li, .profile-icon, .cartIcon{
     transition: .2s;
 }
+#header a {
+    color: #2c496d;   
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 650;
+}
+
+
 .navbar {
     display: flex;
     align-items: center;
@@ -69,6 +79,16 @@
         padding: 40px 0 0 35px;
         transition: .3s;
     }  
+    #header {
+        padding: 0px 25px;
+    }
+    .HHlogo  {
+        max-width: 150px;
+        margin: 7px 0px 7px 1px;
+        /* margin-right: 40px; */
+        /* padding-bottom: 3px; */
+        cursor: pointer;
+    }
     .mobileNav{
         display: flex;
         align-items: flex-start;

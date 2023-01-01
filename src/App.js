@@ -19,6 +19,7 @@ import ForgotPassword from './Components/ForgotPassword';
 import PrivateRoute from './Components/PrivateRoute';
 import ProductOverview from './Components/ProductOverview';
 import Checkout from './Components/Checkout';
+import AboutUs from './Components/AboutUs';
 // import ProductList  from './Components/Product';
 
 
@@ -32,6 +33,7 @@ function App() {
           <Route exact path='/home' element={<Home />}/>
           <Route exact path='/signup' element={<Signup />}/>
           <Route exact path='/login' element={<Login />}/>
+          <Route exact path='/aboutus' element={<AboutUs />}/>
           <Route exact path='/cart' element={<Cart />}/>
           <Route exact path='/checkout' element={<Checkout />}/>
           <Route exact path='/product/:id' element={<ProductOverview />}/>
