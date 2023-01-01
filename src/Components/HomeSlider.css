@@ -45,11 +45,11 @@
 
 @media (max-width:799px) {
     h1.tagline {
-        font-size: 160%
+        font-size: 200%
     }
     .info1 {
         position: absolute;
-        bottom: 30%;
+        bottom: 28%;
         left: 0; 
     }
     h4.shopnow {

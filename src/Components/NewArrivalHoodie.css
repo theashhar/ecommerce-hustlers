@@ -20,6 +20,21 @@
     padding: 6% 10% 6% 10% ;
 }
 
+@media (max-width:799px) {
+    #NewArrival-sec {
+        font-size: 40px;
+    }
+    .wing-icon{
+        width: 80%;
+    }
+    /* .hoodie-img {
+        height: 220%;
+    } */
+    .New-arrival-box {
+        padding: 0 ;
+        margin: 60px 0 60px 0;
+    }
+}
 
 
 
