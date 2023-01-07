@@ -59,6 +59,9 @@
 .mobileNav {
     display: none;
 }
+.cartIconMob {
+    display: none;
+}
 
 
 
@@ -91,16 +94,26 @@
     }
     .mobileNav{
         display: flex;
-        align-items: flex-start;
-        gap: 15px;
+        align-items: center;
+        gap: 25px;
         position: absolute;
         right: 0;
+        
         /*position of hamburger from tight*/
         padding-right: 20px;
         z-index: 20;
     } 
     #navbar.active{
         right: 0px;
+    }
+    .cartIcon {
+        display: none;
+    }
+    .cartIconMob {
+        display: flex;
+        width: 20px;
+        
+        
     }
 
 }

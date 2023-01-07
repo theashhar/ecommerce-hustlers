@@ -88,14 +88,14 @@ export default function Cart() {
             <div className="mt-6">
               <button
                 type="submit"
-                className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                className="w-full rounded-md border border-transparent bg-blue-810 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-blue-820 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
               >
                 Checkout
               </button>
             </div>
           </section>
         </form>:(<div className="mt-12 font-bold text-center">
-            Your are lacking Hustle. Your cart is empty
+            Your are Lacking Hustle. Your cart is empty
           </div>
           )}
       </div>

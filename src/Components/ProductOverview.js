@@ -3,6 +3,8 @@ import { StarIcon } from '@heroicons/react/20/solid'
 import { GlobeAmericasIcon, TruckIcon } from '@heroicons/react/24/outline'
 import { useParams } from 'react-router-dom'
 import {getProduct, addtocart} from './shopify.js'
+import Carousel from 'react-bootstrap/Carousel';
+
 
 const policies = [
   { name: 'Return Policy', icon: GlobeAmericasIcon, description: 'Enter Return Policy' },
@@ -22,7 +24,7 @@ export default function ProductOverview() {
     })
   },[params]) 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-16">
       {product ? (<div className="pt-6 pb-16 sm:pb-24">
         <div className="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
@@ -35,7 +37,9 @@ export default function ProductOverview() {
               <div className="mt-4">
                 <h2 className="sr-only">Reviews</h2>
                 <div className="flex items-center">
-                  <div className="ml-1 flex items-center">
+                  {/* Stars */}
+
+                  {/* <div className="ml-1 flex items-center">
                     {[0, 1, 2, 3, 4].map((rating) => (
                       <StarIcon
                         key={rating}
@@ -46,7 +50,7 @@ export default function ProductOverview() {
                         aria-hidden="true"
                       />
                     ))}
-                  </div>
+                  </div> */}
                   <div aria-hidden="true" className="ml-4 text-sm text-gray-300">
                     ·
                   </div>
@@ -59,21 +63,27 @@ export default function ProductOverview() {
               <h2 className="sr-only">Images</h2>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+                <Carousel slide>
                 {product.images.map((image) => (
-                  <img
-                    key={image.id}
-                    src={image.src}
-                    alt="product"
-                    className="lg:col-span-2 lg:row-span-2 rounded-lg max-w-sm"
-                  />
-                ))}
+                  <Carousel.Item >
+                  
+                    <img
+                      key={image.id}
+                      src={image.src}
+                      alt="product"
+                      className="lg:col-span-2 lg:row-span-2 rounded-lg max-w-sm"
+                    />
+                     </Carousel.Item>
+                  ))}
+                   
+                  </Carousel>
               </div>
             </div>
              
             <div className="mt-8 lg:col-span-5">
             <button
                   type="submit"
-                  className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                  className="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-810 py-3 px-8 text-base font-medium text-white hover:bg-blue-820 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   onClick={(e)=>{
                     e.target.innerText = 'Added to Cart'
                     addtocart(product)

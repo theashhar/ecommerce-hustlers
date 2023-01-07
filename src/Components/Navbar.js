@@ -54,7 +54,8 @@ const[showNavbar, setShowNavbar] = useState(false);
                   cartCountfn()
                 }</span>
               </li>
-            </a><Link to='/userprofile'>
+            </a>
+            <Link to='/userprofile'>
               <li className='profile-icon'>
                 <img src={UserIcon} alt="no img" id='User'/>
               </li>
@@ -63,6 +64,14 @@ const[showNavbar, setShowNavbar] = useState(false);
           
 
        <div className='mobileNav' >
+            <a href='/Cart'>           
+              <li className='cartIconMob'>
+                <img src={CartIcon} alt="no img" id='cartlogo'/>                
+                <span className='cart-icon-css'>{
+                  cartCountfn()
+                }</span>
+              </li>
+            </a>
         < GiHamburgerMenu onClick={()=> setShowNavbar(!showNavbar)} />
         {/* < AiOutlineClose onClick={()=> setShowNavbar(!showNavbar)}  /> */}
        </div>

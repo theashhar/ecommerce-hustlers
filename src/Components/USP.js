@@ -12,17 +12,17 @@ const USP = () => {
         <div className='s-box'>
             <img src= {stylish_design_icon} alt= 'Stylish Design' />
             <h3>Stylish Design</h3>
-            <p>Get Awesome Design</p>
+            {/* <p>Get Awesome Design</p> */}
         </div>
         <div className='s-box-centre'>
             <img src= {premium_quality_icon} alt= 'Premium Quality' />
             <h3>Premium Quality</h3>
-            <p>Get High Quality Fabric</p>
+            {/* <p>Get High Quality Fabric</p> */}
         </div>
         <div className='s-box'>
             <img src= {comfort_icon} alt= 'Heavenly Comfort' />
             <h3>Heavenly Comfort</h3>
-            <p>Get Comfort As You Desire</p>
+            {/* <p>Get Comfort As You Desire</p> */}
         </div>
     </div>
   </section>
