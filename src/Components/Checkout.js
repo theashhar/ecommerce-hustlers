@@ -8,7 +8,7 @@ export default function Checkout() {
         setCart(JSON.parse(localStorage.getItem('cart')) || {})
     },[refresh])
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 pt-16">
       <div className="mx-auto max-w-2xl px-4 pt-16 pb-24 sm:px-6 lg:max-w-7xl lg:px-8">
         <h2 className="sr-only">Checkout</h2>
         <form className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16" onSubmit={(e)=>{
@@ -34,7 +34,7 @@ export default function Checkout() {
                     id="email-address"
                     name="email-address"
                     autoComplete="email"
-                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-810 sm:text-sm"
                   />
                 </div>
               </div>
@@ -53,7 +53,7 @@ export default function Checkout() {
                       id="first-name"
                       name="first-name"
                       autoComplete="given-name"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -68,7 +68,7 @@ export default function Checkout() {
                       id="last-name"
                       name="last-name"
                       autoComplete="family-name"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default function Checkout() {
                       name="address"
                       id="address"
                       autoComplete="street-address"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm  focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -97,7 +97,7 @@ export default function Checkout() {
                       type="text"
                       name="apartment"
                       id="apartment"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm  focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -112,7 +112,7 @@ export default function Checkout() {
                       name="city"
                       id="city"
                       autoComplete="address-level2"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export default function Checkout() {
                       name="country"
                       autoComplete="country-name"
                       defaultValue={"India"}
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     >
                       <option>India</option>
                     </select>
@@ -144,7 +144,7 @@ export default function Checkout() {
                       name="region"
                       id="region"
                       autoComplete="address-level1"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function Checkout() {
                       name="postal-code"
                       id="postal-code"
                       autoComplete="postal-code"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export default function Checkout() {
                       name="phone"
                       id="phone"
                       autoComplete="tel"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-810 focus:ring-blue-820 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -223,7 +223,8 @@ export default function Checkout() {
                       </div>
 
                       <div className="flex flex-1 items-end justify-between pt-2">
-                        <p className="mt-1 text-sm font-medium text-gray-900">{product.price}</p>
+                        
+                        <p className="mt-1 text-sm font-medium text-gray-900">₹{product.variants[0].price.amount}</p>
 
                         <div className="ml-4">
                           <label htmlFor="quantity" className="sr-only">
@@ -244,7 +245,7 @@ export default function Checkout() {
               <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                 <button
                   type="submit"
-                  className="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
+                  className="w-full rounded-md border border-transparent bg-blue-810 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-blue-820 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
                 >
                   Confirm order
                 </button>
