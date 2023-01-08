@@ -58,6 +58,9 @@ const[showNavbar, setShowNavbar] = useState(false);
             <Link to='/userprofile'>
               <li className='profile-icon'>
                 <img src={UserIcon} alt="no img" id='User'/>
+                
+                
+
               </li>
             </Link>
           </ul>
